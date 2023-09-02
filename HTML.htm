@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Learn-git with Yasoob</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <ul id="nav">
+  	<li class="current"><a href="#welcome">Welcome</a></li>
+  	<li><a href="#intro">Introduction</a></li>
+  	<li><a href="#install">Installation</a></li>
+  	<li><a href="#init">Git Init</a></li>
+  	<li><a href="#status">Git Status</a></li>
+  	<li><a href="#add">Git Add</a></li>
+  	<li><a href="#commit">Git Commit</a></li>
+  	<li><a href="#diff">Git Diff</a></li>
+  	<li><a href="#log">Git Log</a></li>
+  	<li><a href="#stash">Git Stash</a></li>
+  	<li><a href="#show">Git show</a></li>
+  	<li><a href="#branch">Git Branch</a></li>
+  	<li><a href="#checkout">Git Checkout</a></li>
+  	<li><a href="#merge">Git merge</a></li>
+  	<li><a href="#reset">Git Reset</a></li>
+    <li><a href="#github">GitHub</a></li>
+  	<li><a href="#goodbye">Goodbye!</a></li>
+  </ul>
+  <a href="https://github.com/yasoob/learn-git" style="top:0;position: absolute;right: 0;z-index: 1;"><img style=" top: 0;  /* right: 0; */ /* border: 0; */" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a><!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" id="welcome">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 25%;margin-bottom:6%">
+        <h1>Learning Git: 101</h1>
+        <a class="author" href="https://yasoob.me/"><h5>Muhammad Yasoob Ullah Khalid</h5></a>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="intro">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 25%">
+        <h3>Introduction</h3>
+        <p>Git is a version control system. It allows you to manage your projects. You can freely edit the code of your projects without ever worrying about loosing anything!</p>
+        <br>
+        <p>In this tutorial you will learn about the basics of git. I will take you from installing git to merging two branches. Please bear with me. I am pretty sure that you will enjoy git after you get a hang of it!</p>
+      </div>
+    </div>
+  </div>
+  <div class="container blue" id="install">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 0%">
+        <h3>Installation</h3>
+        <p>Installation is very easy. Just type the following command on Ubuntu</p>
+        <pre>sudo apt-get install git</pre>
+        <h5>Setup Global Variables</h5>
+        <p>Git needs some innitial information before we can start working with it. You can supply this information
+        with the commands written below. We use <code>--global</code> so that we don't have to input these commands evertime we innitialize a new git repository.</p>
+        <pre>git config --global user.name 'Shaumik'
+git config --global user.email 'sd@gmail.com'</pre>
+		<ul class="downloads">
+			<li><a href="https://gitforwindows.org/">Windows</a></li>
+			<li><a href="https://git-scm.com/book/en/Getting-Started-Installing-Git">Linux</a></li>
+			<li><a href="https://code.google.com/p/git-osx-installer/downloads/list?can=3">OSX</a></li>
+		</ul>
+      </div>
+    </div>
+  </div>
+  <div class="container beige" id="init">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 25%">
+        <h3>Creating a new repository</h3>
+        <p>In order to setup a new repository in a folder just type in the following command</p>
+        <pre>git init .</pre>
+        <p>This innitializes a new git repository in your current folder and allows you to use other <code>git</code> commands.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mehroon" id="status">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 25%">
+        <h3>Checking status</h3>
+        <p>You can check the status of your repository by typing the following command:</p>
+        <pre>git status</pre>
+        <p>This command shows you some helpful information about your repository. It tells you about which files are being tracked by git and which are not.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="add">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Let's add those files</h3>
+        <p>If you have untracked files in your repository. You can easily tell git to track them by running the following command:</p>
+        <pre>git add file_name</pre>
+        <p>Just replace <code>file__name</code> with the name of the file you want git to track. If you want git to track all the files in the current repository then type:</p>
+        <pre>git add .</pre>
+      </div>
+    </div>
+  </div>
+  <div class="container black" id="commit">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Now it's time to commit</h3>
+        <p>So now that you have told git to track the respective files you can commit those files to git:</p>
+        <pre>git commit -m "Commit message"</pre>
+        <p>You need to replace <code>Commit message</code> with the message you want to associate with the respective commit. The commit message should tell you the changes you have introduced in your repo in the respective commit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container beige" id="diff">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Diff</h3>
+        <p>So you have changed your files since your last commit and you want to see those changes. Git makes this easy for you. Just type in:</p>
+        <pre>git diff</pre>
+        <p>If you want to see the changes introduced to a specific file then simply type this (replace file_path with the path to the file):</p>
+        <pre>git diff file_path</pre>
+      </div>
+    </div>
+  </div>
+  <div class="container reddish" id="log">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Where are the logs?</h3>
+        <p>Do you want to see all of the commits which you have made to the repo? Just use this command:</p>
+        <pre>git log</pre>
+        <p>This command prints all of the commits which have been made to the repo. You will use <code>git log</code> a lot in future!</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="stash">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Let's stash 'em changes!</h3>
+        <p>You have made some changes to the repo and want to save those changes. However you are not yet ready to make a full commit. What would you do? You would stash those changes!</p>
+        <pre>git stash</pre>
+        <p>Git records the changes you have made and saves them for later. Once you are ready to apply those changes just type the following command:</p>
+        <pre>git stash apply</pre>
+        <p>This command comes in use while moving from one branch to another. You will learn about branching later.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container blue" id="show">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Let me show!</h3>
+        <p>So you want to see the exact changes which you made in your previous commit. It's easy:</p>
+        <pre>git show HEAD</pre>
+        <p>If you want to see the changes done in <code>n</code> commit (n is the number of commits before head) then simply type this (replace n with a number):</p>
+        <pre>git show HEAD~n</pre>
+        <p><b>Note:</b> HEAD is a reference to your latest commit</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="branch">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 0%">
+        <h3>Branches. Branches everywhere.</h3>
+        <p>So you want to make a LOT of changes to your project but don't want to modify your current working project. You have a solution and it is called branching. Currently we have been working in the main branch (<code>master</code> branch). You can create a branch in your repo and modify the code in that branch. If you are satisfied with your changes and they work perfectly you can merge that branch into your <code>master</code> branch. Otherwise you can simply delete the new branch and start over again.</p>
+        <p>You can create a new branch by typing this command:</p>
+        <pre>git branch branch_name</pre>
+        <p><b>Note: </b>You are not automatically shifted to the new branch. I will share that command and the merge command in the next section.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container green" id="checkout">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 0%">
+        <h3>Checkout.</h3>
+        <p>This <code>checkout</code> command has a lot of usecases. We will take a look at them one-by-one.</p>
+        <p>You have made a lot of changes to a file and now you are regretting it. You want to change it back to the way it was after your last commit. What do you do? You checkout! (replace <code>file_name</code> with the path to the file)</p>
+        <pre>git checkout HEAD file_name</pre>
+        <p>This <code>checkout</code> command to move to another branch. After you have created your branch following the code from the section above, you can move to that branch by typing the following command:</p>
+        <pre>git checkout branch_name</pre>
+        <p>You can create and move to a new branch in a single command as well.</p>
+        <pre>git checkout -b branch_name</pre>
+      </div>
+    </div>
+  </div>
+  <div class="container beige" id="merge">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Merge dem files!</h3>
+        <p>So you have made some changes in a branch and want to move those changes over to the master branch. You can easily do that. Fist you need to move to the master branch</p>
+        <p>So you have made some changes in a branch and want to move those changes over to the master branch. You can easily do that. First you need to move to the master branch</p>
+        <pre>git checkout master</pre>
+        <p>Then you need to type the following command. Replace<code> branch_name</code> with the name of the branch from where you want to pull the changes from.</p>
+        <pre>git merge branch_name</pre>
+      </div>
+    </div>
+  </div>
+  <div class="container light-blue" id="reset">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Reset</h3>
+        <p>Git reset is similar to when you checkout a file using the <code>checkout</code> command. The only difference is that when you reset a file, git removes that file from staging area but keep the changes in the working directory.</p>
+        <pre>git reset HEAD file_name</pre>
+        <p>The above command resets the file in the staging area to the way it was after your last commit. However you do not loose your edits. They are present in your directory but just not staged for the next commit.</p>
+        <p>You can also reset your project to a previous state using <code>reset</code>. First of all you need to find the SHA value of the commit till which you want to reset your project. You can easily find it using the <code>git log</code> command. After that you can type in the following command:</p>
+        <pre>git reset 970c88e</pre>
+        <p><b>Note:</b> You only need the first 7 characters of the SHA</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="github">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>GitHub</h3>
+        <p>This is the website which is dedicated to git and social coding. I am going to share some commands involving github with you.</p>
+        <h5>Fork</h5>
+        <p>You can fork another repository of GitHub by going to a repository page and clicking on fork at the top. This will create a copy of that project under your GitHub account.</p>
+        <h5>Cloning</h5>
+        <p>You can then create a local copy of the remote repo by typing th following command: (You can find your clone url by opening your repo on GitHub and looking at top-right corner)</p>
+        <pre>git clone git@github.com:yasoob/learn-git.git</pre>
+        <p>The above command will create a local copy of the remote repo. You can make changes to it and then after committing those changes to the local repository you can push them to the remote repository.</p>
+        <pre>git push origin master</pre>
+        <h5>Rebase</h5>
+        <p>This command has a lot of purposes but I will show you the most-used one. Suppose you have made a LOT of similar commits into a repository while testing some code and now you want to merge those commits into one. You can do that by doing a <code>git rebase</code>. It is easy. Just type: (replacing n with the amount of last commits you want to modify)</p>
+        <pre>git rebase -i HEAD~n</pre>
+        <p>This will present you with something of this sort.
+        <pre>
+pick 424ad46 branching
+pick 970c88e checkout, merge
+pick d7c8d36 reset
+pick c1d129c github
+# Rebase 5fc27a2..c1d129c onto 5fc27a2
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+        </pre>
+        <p>If you want to squash (merge) these 4 commits into a single commit then you have to change the last three <code>picks</code> to <code>s</code>. It would become something like this:</p>
+        <pre>
+pick 424ad46 branching
+s 970c88e checkout, merge
+s d7c8d36 reset
+s c1d129c github
+# Rebase 5fc27a2..c1d129c onto 5fc27a2
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+        </pre>
+        <p>Now you can save the file and you will be presented with a screen where you can create a new commit message.</p>
+        <h5>Force Push</h5>
+        <p>If you want to push a rebased repo online then you have to do something a bit different. You have to do a <code>force</code> push. It can be done like this:</p>
+        <pre>git push origin +master</pre>
+        <p>The + sign tells git to force push the repo. Alternatively you can also do this:</p>
+        <pre>git push -u origin master</pre>
+        <p>And that's it! I hope you enjoyed this short intro to the world of git :)</p>
+      </div>
+    </div>
+  </div>
+  <div class="container blue" id="goodbye">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 20%">
+        <h3>Goodbye!</h3>
+        <p>This tutorial was made for <a href="https://fossasia.org/">FOSSASIA</a>. It is an organization of awesome people. You can check them out if you ever feel like contributing to the world of Open Source.</p>
+      </div>
+    </div>
+    <div class="row fossasia">
+    	<a href="https://fossasia.org/"><img src="https://fossasia.org/img/fossasia-long.png"></a>
+    </div>
+  </div>
+<!--[if gt IE 8]><!--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><!--<![endif]-->
+	<script src="jquery.nav.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#nav').onePageNav();
+		});
+	</script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
